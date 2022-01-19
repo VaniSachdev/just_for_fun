@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename = 'stylesheet.css') }} ">
+</head>
+<body>
+   
+
+    <h2 class = "center-text"> Glorified Buzz Fizz of {{ number }} </h2>
+    <p class = "center-text"> Change the url /{{ number }} to get a new buzz fizz visualizer!</p>
+   <div class = "center-screen">
+        {% for tuple in list %}
+            {% if tuple[1] == 'bf' %}
+                <div id = "buzzfizz"> 
+                   <p> {{ tuple[0] }} </p>
+                </div>
+            {% elif tuple[1] == 'f' %}
+                <div id = "fizz"> 
+                    <p> {{ tuple[0] }} </p>
+                </div>
+
+            {% elif tuple[1] == 'b' %}
+                <div id = "buzz"> 
+                    <p> {{ tuple[0] }} </p>
+                </div>
+
+            {%  else  %} 
+                <div id = "boring"> 
+                    <p> {{ tuple[0] }} </p>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+   </div>
+   
+  
+   
+</body>
+</html>
