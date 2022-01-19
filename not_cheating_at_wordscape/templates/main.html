@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename = 'stylesheet.css') }} ">
+</head>
+<body>
+   
+
+    <h2 class = "center-text">  Wordscape of {{ key_word }} </h2>
+    <p class = "center-text"> Change the url /{{ key_word }} to get a new anagram!</p>
+   <div class = "center-screen">
+        {% for word in anagram %}
+                <div id = "box"> 
+                   <p> {{ word }} </p>
+                </div>
+        {% endfor %}
+   </div>
+   
+  
+   
+</body>
+</html>

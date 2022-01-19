@@ -1,0 +1,38 @@
+
+.center-text {
+    align-items: center;
+    text-align: center;
+    }
+.center-screen {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+p {
+    font-size: medium;
+}
+
+body>div {
+background: rgb(255, 255, 255);
+display: flex;
+flex-wrap: wrap;
+}
+
+body>div>div {
+    display: flex;
+    background: rgb(255, 255, 255);
+    display: flex;
+    vertical-align: middle;
+    line-height: 100px; 
+    height: 100px;
+    padding: 20px;
+    width: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+}
